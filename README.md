@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LH2 AI LABS — Company Intelligence Agent
 
 An automated, end-to-end company intelligence pipeline: target companies enter via a Google Sheet, the system enriches each company with multi-source signals (including headless browser automation with Playwright), persists structured evidence to a SQL database, evaluates fit using a Gemini LLM, writes verdicts back to Google Sheets, and runs continuously on a schedule — fully containerized, deployed, and wired to GitHub Actions.

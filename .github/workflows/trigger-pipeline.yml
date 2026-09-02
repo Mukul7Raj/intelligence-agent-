@@ -1,0 +1,16 @@
+name: Trigger Pipeline
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # every hour, adjust as needed
+  workflow_dispatch: {}     # allows manual trigger too, but not required
+
+jobs:
+  call-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call deployed /run endpoint
+        run: |
+          curl -X POST "${{ secrets.PIPELINE_URL }}/run" \
+            --fail --silent --show-error \
+            --max-time 120
